@@ -6,8 +6,8 @@ export const useValidationPassword = () => {
   const inputType = showPassword ? 'text' : 'password';
   const hasValidLength = password.length >= 8;
   const numberPattern = /\d+/g;
-  const letterPattern = /[a-zA-Z]+/;
-  const symbolPattern = /[^a-zA-Z0-9\s]+/;
+  const letterPattern = /[а-яА-ЯЁёa-zA-Z]/;
+  const symbolPattern = /[^a-zA-Zа-яА-ЯЁёА-ЩЬЮЯЄІЇҐа-щьюяєіїґ0-9\s]+/;
   const hasNumbers = numberPattern.test(password);
   const hasLetters = letterPattern.test(password);
   const hasSymbols = symbolPattern.test(password);
